@@ -13,6 +13,7 @@
 	<img id="texture" src="models/texture.png">
    	<a-asset-item id="tree-obj" src="models/testScene.obj">     	</a-asset-item>
     	<a-asset-item id="tree-mtl" src="models/testScene.mtl">	</a-asset-item>
+	<audio id="river" src="models/sound.mp3">
   </a-assets>
 
   <a-box color="#FFF" width="4" height="10" depth="2"
@@ -23,13 +24,13 @@
   </a-box>
 
   <a-box color="#00F" width="4" height="10" depth="2"
-         position="-15 5 -10" rotation="0 0 45" scale="2 0.5 	3">
+         position="15 5 -5" rotation="0 0 45" scale="2 0.5 	     		3" sound="src: #river; on: click">
     <!-- Animation will only play when the box is clicked. -->
-    	<a-animation attribute="rotation" begin="click" 	repeat="indefinite" to="0 360 0"></a-animation>
+    	<a-animation attribute="rotation" begin="click" 	repeat="indefinite" to="0 360 0" end="mouseleave"></a-animation>
   </a-box>
 
   <a-camera>
-  	<a-entity cursor="default: true; maxDistance: 300; timeout: 	500"
+  	<a-entity cursor="fuse: true; maxDistance: 300; timeout: 	500"
 	position="0 0 -1"
 	geometry="primitive: ring; radiusInner: 0.02; 	radiusOuter: 0.03"
 	material="color: black; shader: flat">
