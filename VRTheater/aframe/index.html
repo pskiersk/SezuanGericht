@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+		<a-assets>
+			<img id="shinFace" src="materials/facePlaceholder.png">
+			
+			<audio id="soundPlaceholder" src="sound/soundEx.mp3">
+		</a-assets>
+		
+	<a-camera>
+		<a-entity cursor="fuse: true; maxDistance: 3000; timeout: 	500"
+		position="0 0 -1"
+		geometry="primitive: ring; radiusInner: 0.02; 	radiusOuter: 0.03"
+		material="color: black; shader: flat">
+	</a-camera>
+	
+	<!-- kulisse -->
+      <a-box position="8 0.5 -3" rotation="0 0 0" color="#64522E" depth="8" height="1" width="8"></a-box>
+      <a-box position="8 1.2 -3" rotation="0 0 0" color="#64522E" depth="6" height="0.6" width="6"></a-box>
+	  
+      <a-box position="-3.5 0.5 -3" rotation="0 -15 0" color="#64522E" depth="9" height="0.7" width="0.1"></a-box>
+	  
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#554C39"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+	  
+	  
+	<!-- people -->  
+	  <a-box position="-6 1.5 0.5" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-6 0.8 0.5" rotation="0 0 0" color="#64522E" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  <a-box position="-6.5 1.5 -1" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-6.5 0.8 -1" rotation="0 0 0" color="#3F1D07" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  <a-box position="-7 1.5 -2.5" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-7 0.8 -2.5" rotation="0 0 0" color="#274609" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  <a-box position="-6 1.5 -4" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-6 0.8 -4" rotation="0 0 0" color="#64522E" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  <a-box position="-5 1.5 -5.5" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-5 0.8 -5.5" rotation="0 0 0" color="#274609" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  <a-box position="-4 1.5 -7" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="-4 0.8 -7" rotation="0 0 0" color="#3F1D07" depth="0.5" height="1.5" width="0.5"></a-box>
+	  
+	  
+	  	<!-- gods -->  
+	  <a-box position="8 2.9 -4.5" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="8 2.2 -4.5" rotation="0 0 0" color="#FFBD36" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -4.5" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  <a-box position="8 2.9 -3" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6">
+		<a-animation attribute="position" begin="0" direction="alternate" end ="click" from="8 2.9 -3" repeat="indefinite" to="8 3.2 -3" ></a-animation>
+		<a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0" ></a-animation>
+	  </a-box>
+      <a-box position="8 2.2 -3" rotation="0 0 0" color="#FFBD36" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -3" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  <a-box position="8 2.9 -1.5" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6"></a-box>
+      <a-box position="8 2.2 -1.5" rotation="0 0 0" color="#FFBD36" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -1.5" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  	<!-- shen te shui ta -->  
+	  <a-box position="0 1.5 -6" rotation="0 0 0" material="src: #shinFace"> depth="0.6" height="0.6" width="0.6">
+		<a-animation attribute="rotation" begin="0" repeat="indefinite" to="0 360 0"></a-animation>
+	  </a-box>
+      <a-box position="0 0.8 -6" rotation="0 0 0" color="#282828" depth="0.5" height="1.5" width="0.5" sound="on: click; loop: true; src: #soundPlaceholder"></a-box>
+
+	  
+    </a-scene>
+  </body>
+</html>
