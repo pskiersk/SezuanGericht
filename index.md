@@ -26,31 +26,21 @@
 
 ### Aufgabenverteilung
 
-  - Sara: 3D Modellierung (Szenerie: Gerichtssaal, Figuren) 
+  - Sara: Recherche von Effekten(Lichter, Wolken, Skybox, Partikel), 3D Modellierung (Szenerie: Gerichtssaal, Figuren) 
 
-  - Philip: Sound (Schneiden der Tonaufnahmen) 
+  - Philip: Sound (Skript mit Blöcken, Schneiden der Tonaufnahmen) 
 
-  - Alle: Animation (Wolke mit Göttern fährt hoch, Figuren verschwinden) 
-
-  - Valentina und Yannick: Programmierung der Interaktion (User) und Bild/Blick/Schnitt (Blick - Ton) 
-
-  - Alle: Regie 
-
-### Fortschritte/Ziele bis zur nächsten Sitzung
-
-  - Konkretisierung der Aufgaben 
-
-  - Erstellung einer Roadmap
-
-  - Entscheidung der Vorgehensweise für die Herausforderungen
+  - Valentina: 3D Modellierung und Teturierung
+  
+  - Yannick: Programmierung des Ablaufs, Zusammenführung der vom Rest der Gruppe gelieferten Bausteine
 
 ### Pläne für den Sprint
 
-  - Sound: fertig Schneiden
+  - Sound: Skript anfertigen, Sound fertig Schneiden
 
-  - 3d: Grundlage der Szene erstellen, sodass der Programmier und Sound in eine Rohfassung eingebunden werden kann
+  - 3d:Szene fertig machen damit nurnoch Sound und Programmierung eingefügt werden müsseb
 
-  - Programmierung: Grundlegende Funktionen lernen (triggern von Animationen, Blickkontakt des Users als Event nutzen)
+  - Programmierung: Programmstruktur bauen um am Ende nurnnoch die Teile einfügen zu müssen
 
 ### Support or Contact
 Having trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.
