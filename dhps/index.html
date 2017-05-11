@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gerichtssaal</title>
+    <meta name="description" content="Gerichtssaal">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+		<a-assets>
+			<img id="wang" src="materials/wang.jpg">
+            <img id="hausbesitzerin" src="materials/hausbesitzerin.png">
+            <img id="schwagerin" src="materials/schwagerin.jpg">
+            <img id="polizist" src="materials/polizist.jpg">
+            <img id="arbeitslose" src="materials/arbeitslose.jpg">
+            <img id="schreiner" src="materials/schreiner.jpg">
+            <img id="diealte" src="materials/diealte.jpg">
+            <img id="deralte" src="materials/deralte.jpg">
+            <img id="jungepro" src="materials/jungepro.jpg">
+            <img id="shin" src="materials/shin.jpg">
+            <img id="yangsun" src="materials/yangsun.jpg">
+            <img id="shufu" src="materials/shufu.jpg">
+            <img id="shente" src="materials/shenten.jpg">
+            <img id="shuita" src="materials/shuita.jpg">
+            
+            <img id="krawatte" src="materials/krawatte.jpg">
+            <img id="kleid" src="materials/kleid.jpg">
+            
+            <img id="boden" src="materials/boden.jpg">
+            <img id="podest" src="materials/podest.jpg">
+            
+            <img id="mask" src="materials/bild.png">
+            
+            <img id="gott" src="materials/krawattegott.jpg">
+            <img id="gottzwei" src="materials/krawattegottzwei.jpg">
+            <img id="gottdrei" src="materials/krawattegottdrei.jpg">
+
+            
+			
+			<audio id="Block1_derAlte" src="sound/Block1/derAlte.mp3">            
+			<audio id="Block1_dieAlte" src="sound/Block1/dieAlte.mp3">                
+			<audio id="Block1_Schreiner" src="sound/Block1/Schreiner.mp3">            
+			<audio id="Block1_Schwaegerin" src="sound/Block1/Schwaegerin.mp3">                
+			<audio id="Block1_Wang" src="sound/Block1/Wang.mp3">
+                
+             
+            <audio id="Block2" src="sound/Block2/Block2.mp3">
+                
+            <audio id="Block3_Hausbesitzerin" src="sound/Block3/Hausbesitzerin.mp3">
+            <audio id="Block3_Shufu" src="sound/Block3/Shufu.mp3">  
+                
+            <audio id="Block4_1" src="sound/Block4/Block4_1.mp3">
+            <audio id="Block4_2" src="sound/Block4/Block4_2.mp3">
+            <audio id="Block4_3" src="sound/Block4/Block4_3.mp3">  
+        
+		</a-assets>
+		
+	<a-camera>
+		<a-entity cursor="fuse: true;"; position="0 0 -1";	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
+	</a-camera>
+        
+    <a-light type="hemisphere" position="0 11 6" intensity="0.5" color="#FFFFFF"></a-light>
+    <a-light type="point" position="-30 47 13" rotation="0 40 0" color="#f3e6cb"></a-light>
+	<a-sky color="#b3f0ff"></a-sky>
+
+        <a-entity>
+     <!-- Kulisse Wände -->
+	
+	  <a-box position="0 17 -24.84" rotation="0 0 0" color="#888888" depth="5" height="2" width="44"></a-box>
+	      
+      <a-cylinder position="10 8.88 -25.21" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+        
+      <a-cylinder position="-19.95 8.88 -25.21" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+	  <a-cylinder position="0 8.88 -25.21" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+      <a-cylinder position="-10 8.88 -25.21" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+        
+
+	  <a-cylinder position="20.18 8.88 -25.21" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+
+	  <a-box position="20 17 -3.20" rotation="0 0 0" color="#888888" depth="44" height="2" width="4"></a-box>
+        
+        
+	  <a-box position="0 17 16.26" rotation="0 0 0" color="#888888" depth="5" height="2" width="44"></a-box>
+      
+      <a-cylinder position="10 8.88 16.26" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+        
+      <a-cylinder position="20.18 8.88 16.26" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+      <a-cylinder position="20.18 8.88 5.30" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+      <a-cylinder position="20.18 8.88 -5.23" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+      <a-cylinder position="20.18 8.88 -15.43" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder> 
+        
+	  <a-cylinder position="0 8.88 16.26" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+      <a-cylinder position="-10 8.88 16.26" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+        
+      <a-cylinder position="-19.95 8.88 16.26" rotation="0 0 0" height="17.88" open-ended="true" color="#888888" radius="2"></a-cylinder>
+
+	
+      <a-box position="8 0.5 -3" rotation="0 0 0" color="#888888" depth="8" height="1" width="8"></a-box>
+      <a-box position="8 1.2 -3" rotation="0 0 0" color="#888888" depth="6" height="0.6" width="6"></a-box>
+	  
+      <a-box position="-3.5 0.5 -3" rotation="0 -15 0" color="#888888" depth="9" height="0.7" width="0.1"></a-box>
+	  
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#554C39"></a-plane>
+        
+	<!-- Kulisse Wände -->
+	<!-- Kulisse Dach-->
+        <a-box position="0 22.07 7.16" rotation="25 0 0" color="#888888" depth="27" width="44" height="3"></a-box>
+        <a-box position="0 22.05 -16.05" rotation="-25 0 0" color="#888888" depth="27" width="44" height="3"></a-box>
+    <!-- Kulisse Dach-->
+        
+	<!-- kulisse -->
+      <a-box position="8 0.5 -3" rotation="0 0 0" material="src: #podest" depth="8" height="1" width="8"></a-box>
+      <a-box position="8 1.2 -3" rotation="0 0 0" material="src: #podest" depth="6" height="0.6" width="6"></a-box>
+	  
+        
+      <a-box position="-2.51 5 -18.46" rotation="0 -70 0" material="src: #mask" depth="20" height="12" width="0.1"></a-box>
+	  
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" material="src: #boden"></a-plane>
+        </a-entity>
+      <!--<a-sky color="#ECECEC"></a-sky>-->
+        
+    <a-entity>
+      <a-sphere position="0 9.31 -1" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 4.08" radius="1" material="src: #mask" material="src: #mask" rotation=""></a-sphere>
+      <a-sphere position="-3.56 9.31 4.08" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0.08 6.67 -10.19" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 -1" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="6.44 7.67 -10.19" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="360 0 0"></a-animation></a-sphere>
+      <a-sphere position="3.45 7.67 4.02" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 0 360"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 -1" radius="1" material="src: #mask" material="src: #mask" rotation=""></a-sphere>
+      <a-sphere position="-1.52 8.82 -3.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-6.07 8.82 -3.84" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>    
+      <a-sphere position="-4.53 7.79 6.59" radius="1" material="src: #mask" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-2.91 7.79 -2.23" radius="1" material="src: #mask" material="src: #mask" rotation=""></a-sphere>
+
+        
+      <a-sphere position="0 9.31 -6" radius="1" material="src: #mask"  material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 1.08" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-3.56 9.31 1.08" radius="1" material="src: #mask" rotation="-90 0 0"></a-sphere>
+      <a-sphere position="0.08 6.67 -5.19" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 -4" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="6.44 7.67 -5.19" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="3.45 7.67 -1.02" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="0 9.31 -6" radius="1" material="src: #mask" rotation=""></a-sphere>
+      <a-sphere position="-1.52 8.82 -8.84" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-6.07 8.82 -8.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>    
+      <a-sphere position="-4.53 7.79 1.59" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-2.91 7.79 -5.23" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+        
+      <a-sphere position="5 9.31 -6" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="5 9.31 1.08" radius="1" material="src: #mask"rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="2.56 9.31 1.08" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="5.08 6.67 -5.19" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="5 9.31 -4" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="11.44 7.67 -5.19" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="8.45 7.67 -1.02" radius="1" material="src: #mask" rotation=""></a-sphere>
+      <a-sphere position="5 9.31 -6" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-4.52 8.82 -8.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-1.07 8.82 -8.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>    
+      <a-sphere position="1.53 7.79 1.59" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="3.91 7.79 -5.23" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>   
+        
+      <a-sphere position="-12 9.31 -6" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-12 9.31 1.08" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-15.56 9.31 1.08" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-12.08 6.67 -5.19" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 0 360"></a-animation></a-sphere>
+      <a-sphere position="-10 9.31 -4" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 0 360"></a-animation></a-sphere>
+      <a-sphere position="-16.44 7.67 -5.19" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-13.45 7.67 -1.02" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-10 9.31 -6" radius="1" material="src: #mask" rotation=""></a-sphere>
+      <a-sphere position="-19.52 8.82 -8.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 0 w60"></a-animation></a-sphere>
+      <a-sphere position="-16.07 8.82 -8.84" radius="1" material="src: #mask" rotation=""><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="360 0 0"></a-animation></a-sphere>    
+      <a-sphere position="-15.53 7.79 1.59" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 360 0"></a-animation></a-sphere>
+      <a-sphere position="-10.91 7.79 -5.23" radius="1" material="src: #mask" rotation="-90 0 0"><a-animation attribute="rotation" class="repeat" repeat="indefinite" to="0 0 360"></a-animation></a-sphere>
+</a-entity>
+
+	<!-- people -->  
+	  <a-box position="-6 1.5 0.5" rotation="0 0 0" material="src: #wang" id="person_wang" class="person"></a-box>
+      <a-box position="-6 0.8 0.5" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+	  
+	  
+	  <a-box position="-6.5 1.5 -1" rotation="0 0 0" material="src: #hausbesitzerin" id="person_hausbesitzerin" class="person"></a-box>
+      <a-box position="-6.5 0.8 -1" rotation="0 0 0" material="src: #kleid" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+	  
+	  
+	  <a-box position="-7 1.5 -2.5" rotation="0 0 0" material="src: #schwagerin" id="person_schwagerin" class="person"></a-box>
+      <a-box position="-7 0.8 -2.5" rotation="0 0 0" material="src: #kleid" depth="0.5" height="1.5" width="0.5" class="person" ></a-box>
+	  
+	  <a-box position="-6 1.5 -4" rotation="0 0 0" material="src: #polizist" id="person_polizist" class="person"></a-box>
+      <a-box position="-6 0.8 -4" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person" ></a-box>
+	  
+	  
+	  <a-box position="-5 1.5 -5.5" rotation="0 0 0" material="src: #arbeitslose" id="person_arbeitslose" class="person"></a-box>
+      <a-box position="-5 0.8 -5.5" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+	  
+	  
+	  <a-box position="-4 1.5 -7" rotation="0 0 0" material="src: #schreiner" id="person_schreiner" class="person"></a-box>
+      <a-box position="-4 0.8 -7" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+
+	  <a-box position="-6.94 1.5 2.56" rotation="0 0 0" material="src: #diealte" id="person_diealte" class="person"></a-box>
+      <a-box position="-6.94 0.8 2.56" rotation="0 0 0" material="src: #kleid" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+
+	  <a-box position="-6.60 1.5 5.40" rotation="0 0 0" material="src: #deralte" id="person_deralte" class="person"></a-box>
+      <a-box position="-6.60 0.8 5.40" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+
+      <a-box position="-2.32 1.5 -10.32" rotation="0 0 0" material="src: #jungepro" id="person_jungepro" class="person"></a-box>
+      <a-box position="-2.32 0.8 -10.32" rotation="0 0 0" material="src: #kleid" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+	  
+      <a-box position="-1.56 1.5 -11.62" rotation="0 0 0" material="src: #shin" id="person_shin" class="person"></a-box>
+      <a-box position="-1.56 0.8 -11.62" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>
+        
+      <a-box position="-6.47 1.5 -5.83" rotation="0 0 0" material="src: #yangsun" id="person_yangsun" class="person"></a-box>
+      <a-box position="-6.47 0.8 -5.83" rotation="0 0 0"material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>  
+        
+      <a-box position="-6.88 1.5 -6.69" rotation="0 0 0" material="src: #shufu" id="person_shufu" class="person"></a-box>
+      <a-box position="-6.88 0.8 -6.69" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" class="person"></a-box>      
+        
+	  	<!-- gods -->  
+	  <a-box position="8 2.9 -4.5" rotation="0 0 0" color="white" id="godone" class="gods" ></a-box>
+      <a-box position="8 2.2 -4.5" rotation="0 0 0" material="src: #gott" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -4.5" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  <a-box position="8 2.9 -3" rotation="0 0 0" color="white" id="godtwo" class="gods"></a-box>
+      <a-box position="8 2.2 -3" rotation="0 0 0" material="src: #gottzwei" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -3" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  <a-box position="8 2.9 -1.5" rotation="0 0 0" color="white" id="godtree" class="gods"></a-box>
+      <a-box position="8 2.2 -1.5" rotation="0 0 0" material="src: #gottdrei" depth="0.5" height="1.5" width="0.5"></a-box>
+	  <a-ring position="8 3.7 -1.5" rotation="90 0 0" color="#FFBD36" radius-inner="0.5" radius-outer="0.6"></a-ring>
+	  
+	  
+	  	<!-- shen te shui ta -->  
+	  <a-box position="0 1.5 -6" rotation="0 0 0" material="src: #shente" id="shenteshuita" ></a-box>
+      <a-box position="0 0.8 -6" rotation="0 0 0" material="src: #krawatte" depth="0.5" height="1.5" width="0.5" ></a-box>
+
+	  
+    </a-scene>
+<script>
+    // JS    propz to Gorn & Tinixi
+    var blockEnum = 1;
+    var eventzaehlerBlock1 =0;
+    var eventzaehlerBlock3 =0;
+    var initBlock1 =1;    
+    var soundAllowedToPlay = true;
+    var blockZweiZuEnde = false;
+    var sceneEl = document.querySelector('a-scene');
+    
+    var deralteEl = document.querySelector('#person_deralte');
+    var diealteEl = document.querySelector('#person_diealte');
+    var wangEl = document.querySelector('#person_wang');
+    var schreinerEl = document.querySelector('#person_schreiner');
+    var schwagerinEl = document.querySelector('#person_schwagerin');
+    var hausbesitzerinEL = document.querySelector('#person_hausbesitzerin');
+    var polizistEl = document.querySelector('#person_polizist');
+    var arbeitsloseEl = document.querySelector('#person_arbeitslose');
+    var jungeproEl = document.querySelector('#person_jungepro');
+    var shinEl = document.querySelector('#person_shin');
+    var yangsunEl = document.querySelector('#person_yangsun');
+    var shufuEl = document.querySelector('#person_shufu');
+    
+    var godoneEl = document.querySelector('#godone');
+    var godtwoEl = document.querySelector('#godtwo');
+    var godtreeEl = document.querySelector('#godtree');
+    
+    var shenteEl = document.querySelector('#shenteshuita');
+        
+     
+    
+    
+    if( blockEnum == 1 ){    
+        
+        if(initBlock1==1){
+            
+            var anideralteEl = document.createElement('a-animation');
+            deralteEl.appendChild(anideralteEl);
+            anideralteEl.setAttribute('attribute', 'rotation');
+            anideralteEl.setAttribute('delay', '0');
+            anideralteEl.setAttribute('id', 'anideralteEl');    
+            anideralteEl.setAttribute('repeat', 'indefinite');
+            anideralteEl.setAttribute('to', '0 360 0');  
+            deralteEl.setAttribute('cursor-listener', 'animationId:  #anideralteEl; soundId: #Block1_derAlte; positionFrom: -6.60 1.5 5.40; positionTo: -6.60 1.8 5.40');
+            
+            var anidiealteEl = document.createElement('a-animation');
+            diealteEl.appendChild(anidiealteEl);
+            anidiealteEl.setAttribute('attribute', 'rotation');
+            anidiealteEl.setAttribute('delay', '0');
+            anidiealteEl.setAttribute('id', 'anidiealteEl');    
+            anidiealteEl.setAttribute('repeat', 'indefinite');
+            anidiealteEl.setAttribute('to', '0 360 0');  
+            diealteEl.setAttribute('cursor-listener', 'animationId:  #anidiealteEl; soundId: #Block1_dieAlte; positionFrom: -6.94 1.5 2.56; positionTo: -6.94 1.8 2.56');
+            
+            var aniwangEl = document.createElement('a-animation');
+            wangEl.appendChild(aniwangEl);
+            aniwangEl.setAttribute('attribute', 'rotation');
+            aniwangEl.setAttribute('delay', '0');
+            aniwangEl.setAttribute('id', 'aniwangEl');    
+            aniwangEl.setAttribute('repeat', 'indefinite');
+            aniwangEl.setAttribute('to', '0 360 0');  
+            wangEl.setAttribute('cursor-listener', 'animationId:  #aniwangEl; soundId: #Block1_Wang; positionFrom: -6 1.5 0.5; positionTo: -6 1.8 0.5');
+            
+            var anischreinerEl = document.createElement('a-animation');
+            schreinerEl.appendChild(anischreinerEl);
+            anischreinerEl.setAttribute('attribute', 'rotation');
+            anischreinerEl.setAttribute('delay', '0');
+            anischreinerEl.setAttribute('id', 'anischreinerEl');    
+            anischreinerEl.setAttribute('repeat', 'indefinite');
+            anischreinerEl.setAttribute('to', '0 360 0');  
+            schreinerEl.setAttribute('cursor-listener', 'animationId:  #anischreinerEl; soundId: #Block1_Schreiner; positionFrom: -4 1.5 -7; positionTo: -4 1.8 -7');
+            
+            var anischwagerinEl = document.createElement('a-animation');
+            schwagerinEl.appendChild(anischwagerinEl);
+            anischwagerinEl.setAttribute('attribute', 'rotation');
+            anischwagerinEl.setAttribute('delay', '0');
+            anischwagerinEl.setAttribute('id', 'anischwagerinEl');    
+            anischwagerinEl.setAttribute('repeat', 'indefinite');
+            anischwagerinEl.setAttribute('to', '0 360 0');  
+            schwagerinEl.setAttribute('cursor-listener', 'animationId:  #anischwagerinEl; soundId: #Block1_Schwaegerin; positionFrom: -7 1.5 -2.5; positionTo: -7 1.8 -2.5');
+            
+            initBlock1++;
+        }
+    }
+
+    
+    function initBlock2(){
+        
+            var aniwangEl = document.createElement('a-animation');
+            wangEl.setAttribute('rotation','0 0 0');
+            wangEl.appendChild(aniwangEl);
+            aniwangEl.setAttribute('attribute', 'rotation');
+            aniwangEl.setAttribute('delay', '0');
+            aniwangEl.setAttribute('id', 'aniwangEl');    
+            aniwangEl.setAttribute('repeat', 'indefinite');
+            aniwangEl.setAttribute('to', '0 360 0');  
+            wangEl.setAttribute('cursor-listener', 'animationId:  #aniwangEl; soundId: #Block2; positionFrom: -6 1.5 0.5; positionTo: -6 1.8 0.5');
+        
+    }
+    
+    
+    function initBlock3(){
+            var els = sceneEl.querySelectorAll('a-animation');
+                for (var i = 0; i < els.length; i++) {
+                    els[i].parentNode.removeChild(els[i]);
+                }
+            
+        
+            var anipolizistEl = document.createElement('a-animation');
+            polizistEl.setAttribute('rotation','0 0 0');
+            polizistEl.appendChild(anipolizistEl);
+            anipolizistEl.setAttribute('attribute', 'rotation');
+            anipolizistEl.setAttribute('delay', '0');
+            anipolizistEl.setAttribute('id', 'anipolizistEl');    
+            anipolizistEl.setAttribute('repeat', 'indefinite');
+            anipolizistEl.setAttribute('to', '0 360 0');  
+            polizistEl.setAttribute('cursor-listener', 'animationId:  #anipolizistEl; soundId: #Block3_Shufu; positionFrom: -6 1.5 -4; positionTo: -6 1.8 -4');
+        
+            
+        
+            var anihausbesitzerinEL = document.createElement('a-animation');
+            hausbesitzerinEL.setAttribute('rotation','0 0 0');
+            hausbesitzerinEL.appendChild(anihausbesitzerinEL);
+            anihausbesitzerinEL.setAttribute('attribute', 'rotation');
+            anihausbesitzerinEL.setAttribute('delay', '0');
+            anihausbesitzerinEL.setAttribute('id', 'anihausbesitzerinEL');    
+            anihausbesitzerinEL.setAttribute('repeat', 'indefinite');
+            anihausbesitzerinEL.setAttribute('to', '0 360 0');  
+            hausbesitzerinEL.setAttribute('cursor-listener', 'animationId:  #anihausbesitzerinEL; soundId: #Block3_Hausbesitzerin; positionFrom: -6.5 1.5 -1; positionTo:-6.5 1.8 -1');              
+        
+    }
+    
+    
+    function initBlock4(){
+        var els = sceneEl.querySelectorAll('a-animation');
+                for (var i = 0; i < els.length; i++) {
+                    els[i].parentNode.removeChild(els[i]);
+                }
+        
+            var anigodoneEl41 = document.createElement('a-animation');
+            godoneEl.setAttribute('rotation','0 0 0');
+            godoneEl.appendChild(anigodoneEl41);
+            anigodoneEl41.setAttribute('attribute', 'rotation');
+            anigodoneEl41.setAttribute('delay', '0');
+            anigodoneEl41.setAttribute('id', 'anihausbesitzerinEL');    
+            anigodoneEl41.setAttribute('repeat', 'indefinite');
+            anigodoneEl41.setAttribute('to', '0 360 0');  
+            godoneEl.setAttribute('cursor-listener', 'animationId:  #anigodoneEl41; soundId: #Block4_1; positionFrom: 8 2.9 -4.5; positionTo:8 3.2 -4.5'); 
+        
+        
+        
+                    
+        
+        
+    }
+   
+
+        
+AFRAME.registerComponent('cursor-listener', {
+            schema:{
+                animationId: {default: "#anideralteEl"},
+                soundId: {default: "#Block1_derAlte"},
+                positionFrom: {default: "-6.60 1.5 5.40"},
+                positionTo: {default: "-6.60 1.8 5.40"}
+            },
+            
+          init: function () {
+            var that = this;
+            if(soundAllowedToPlay==true){  
+            this.el.addEventListener('click', function (evt) {
+                
+                soundAllowedToPlay = false;
+                this.setAttribute('sound',{autoplay: true, src: that.data.soundId});
+                
+                
+                this.addEventListener('sound-ended', function () {
+                    
+                    playedAnimEL.parentNode.removeChild(playedAnimEL);
+                    
+                    this.removeAttribute('cursor-listener');
+                    this.setAttribute('position', that.data.positionFrom);
+                    
+                    soundAllowedToPlay = true;
+                    eventzaehlerBlock1++;
+                    
+                    if(eventzaehlerBlock1==5){
+                        initBlock2();
+                        eventzaehlerBlock1++;
+                        blockEnum++;
+                    }
+                    
+                    if(blockEnum==2 && blockZweiZuEnde == true){
+                        initBlock3();
+                        blockEnum++;
+                        
+                    }
+                    
+                    if(blockEnum==3 && eventzaehlerBlock3==2){
+                        initBlock4();
+                        blockEnum++;
+                        eventzaehlerBlock3++;
+                        
+                    }
+                    
+                });
+                
+                
+                //////////////////////////
+                
+                var playedAnimEL1 = sceneEl.querySelector(that.data.animationId);
+                console.log(playedAnimEL1);
+                playedAnimEL1.parentNode.removeChild(playedAnimEL1);
+                
+                var playedAnimEL = document.createElement('a-animation');
+                this.appendChild(playedAnimEL);
+                
+                playedAnimEL.setAttribute('attribute', 'position');
+                playedAnimEL.setAttribute('direction', 'alternate');
+                playedAnimEL.setAttribute('rotation', '0 0 0');
+                playedAnimEL.setAttribute('delay', '0');
+                playedAnimEL.setAttribute('id', that.data.animationId);   
+                playedAnimEL.setAttribute('from', that.data.positionFrom);
+                
+                
+                if(blockEnum==1){ 
+                    playedAnimEL.setAttribute('repeat', 'indefinite');
+                }
+                
+                if(blockEnum==2 || blockEnum==3){ 
+                    playedAnimEL.setAttribute('repeat', '1');
+                }
+                
+                playedAnimEL.setAttribute('to', that.data.positionTo);
+                
+                
+                ////////////////////////////
+                
+                if(blockEnum==2){ 
+                   var anipolizistEl3 = document.createElement('a-animation');
+                    polizistEl.setAttribute('rotation','0 0 0');
+                    polizistEl.appendChild(anipolizistEl3);
+                    anipolizistEl3.setAttribute('attribute', 'position');
+                    anipolizistEl3.setAttribute('direction', 'alternate');
+                    anipolizistEl3.setAttribute('rotation', '0 0 0');
+                    anipolizistEl3.setAttribute('delay', '4000');
+                    anipolizistEl3.setAttribute('id', 'anipolizistEl3');   
+                    anipolizistEl3.setAttribute('from', '-6 1.5 -4');        
+                    anipolizistEl3.setAttribute('repeat', '1');
+                    anipolizistEl3.setAttribute('to', '-6 1.8 -4'); 
+                    
+                    
+                    var anigodtreeEl = document.createElement('a-animation');
+                    godtreeEl.setAttribute('rotation','0 0 0');
+                    godtreeEl.appendChild(anigodtreeEl);
+                    anigodtreeEl.setAttribute('attribute', 'position');
+                    anigodtreeEl.setAttribute('direction', 'alternate');
+                    anigodtreeEl.setAttribute('rotation', '0 0 0');
+                    anigodtreeEl.setAttribute('delay', '7000');
+                    anigodtreeEl.setAttribute('id', 'anigodtreeEl');   
+                    anigodtreeEl.setAttribute('from', '8 2.9 -1.5');        
+                    anigodtreeEl.setAttribute('repeat', '1');
+                    anigodtreeEl.setAttribute('to', '8 3.2 -1.5'); 
+                    
+                    
+                    var anigodtwoEl = document.createElement('a-animation');
+                    godtwoEl.setAttribute('rotation','0 0 0');
+                    godtwoEl.appendChild(anigodtwoEl);
+                    anigodtwoEl.setAttribute('attribute', 'position');
+                    anigodtwoEl.setAttribute('direction', 'alternate');
+                    anigodtwoEl.setAttribute('rotation', '0 0 0');
+                    anigodtwoEl.setAttribute('delay', '11000');
+                    anigodtwoEl.setAttribute('id', 'anigodtwoEl');   
+                    anigodtwoEl.setAttribute('from', '8 2.9 -3');        
+                    anigodtwoEl.setAttribute('repeat', '1');
+                    anigodtwoEl.setAttribute('to', '8 3.2 -3'); 
+                    
+                    var anigodoneEl = document.createElement('a-animation');
+                    godoneEl.setAttribute('rotation','0 0 0');
+                    godoneEl.appendChild(anigodoneEl);
+                    anigodoneEl.setAttribute('attribute', 'position');
+                    anigodoneEl.setAttribute('direction', 'alternate');
+                    anigodoneEl.setAttribute('rotation', '0 0 0');
+                    anigodoneEl.setAttribute('delay', '15000');
+                    anigodoneEl.setAttribute('id', 'anigodoneEl');   
+                    anigodoneEl.setAttribute('from', '8 2.9 -4.5');        
+                    anigodoneEl.setAttribute('repeat', '1');
+                    anigodoneEl.setAttribute('to', '8 3.2 -4.5');
+                    
+                    
+                    var anishinEl = document.createElement('a-animation');
+                    shinEl.setAttribute('rotation','0 0 0');
+                    shinEl.appendChild(anishinEl);
+                    anishinEl.setAttribute('attribute', 'position');
+                    anishinEl.setAttribute('direction', 'alternate');
+                    anishinEl.setAttribute('rotation', '0 0 0');
+                    anishinEl.setAttribute('delay', '25000');
+                    anishinEl.setAttribute('id', 'anishinEl');   
+                    anishinEl.setAttribute('from', '-1.56 1.5 -11.62');        
+                    anishinEl.setAttribute('repeat', '1');
+                    anishinEl.setAttribute('to', '-1.56 1.8 -11.62');
+                    
+                    var aniwangEl2 = document.createElement('a-animation');
+                    wangEl.setAttribute('rotation','0 0 0');
+                    wangEl.appendChild(aniwangEl2);
+                    aniwangEl2.setAttribute('attribute', 'position');
+                    aniwangEl2.setAttribute('direction', 'alternate');
+                    aniwangEl2.setAttribute('rotation', '0 0 0');
+                    aniwangEl2.setAttribute('delay', '27000');
+                    aniwangEl2.setAttribute('id', 'aniwangEl2');   
+                    aniwangEl2.setAttribute('from', '-6 1.5 0.5');        
+                    aniwangEl2.setAttribute('repeat', '1');
+                    aniwangEl2.setAttribute('to', '-6 1.8 0.5');
+                    
+                     var anipolizistEl4 = document.createElement('a-animation');
+                    polizistEl.setAttribute('rotation','0 0 0');
+                    polizistEl.appendChild(anipolizistEl4);
+                    anipolizistEl4.setAttribute('attribute', 'position');
+                    anipolizistEl4.setAttribute('direction', 'alternate');
+                    anipolizistEl4.setAttribute('rotation', '0 0 0');
+                    anipolizistEl4.setAttribute('delay', '48000');
+                    anipolizistEl4.setAttribute('id', 'anipolizistEl4');   
+                    anipolizistEl4.setAttribute('from', '-6 1.5 -4');        
+                    anipolizistEl4.setAttribute('repeat', '1');
+                    anipolizistEl4.setAttribute('to', '-6 1.8 -4'); 
+                    
+                    var anijungeproEl = document.createElement('a-animation');
+                    jungeproEl.setAttribute('rotation','0 0 0');
+                    jungeproEl.appendChild(anijungeproEl);
+                    anijungeproEl.setAttribute('attribute', 'position');
+                    anijungeproEl.setAttribute('direction', 'alternate');
+                    anijungeproEl.setAttribute('rotation', '0 0 0');
+                    anijungeproEl.setAttribute('delay', '66000');
+                    anijungeproEl.setAttribute('id', 'anijungeproEl');   
+                    anijungeproEl.setAttribute('from', '-2.32 1.5 -10.32');        
+                    anijungeproEl.setAttribute('repeat', '1');
+                    anijungeproEl.setAttribute('to', '-2.32 1.8 -10.32'); 
+                    
+                    var anischwagerinEl = document.createElement('a-animation');
+                    schwagerinEl.setAttribute('rotation','0 0 0');
+                    schwagerinEl.appendChild(anischwagerinEl);
+                    anischwagerinEl.setAttribute('attribute', 'position');
+                    anischwagerinEl.setAttribute('direction', 'alternate');
+                    anischwagerinEl.setAttribute('rotation', '0 0 0');
+                    anischwagerinEl.setAttribute('delay', '69000');
+                    anischwagerinEl.setAttribute('id', 'anischwagerinEl');   
+                    anischwagerinEl.setAttribute('from', '-7 1.5 -2.5');        
+                    anischwagerinEl.setAttribute('repeat', '1');
+                    anischwagerinEl.setAttribute('to', '-7 1.8 -2.5'); 
+                    
+                    var aniwangEl3 = document.createElement('a-animation');
+                    wangEl.setAttribute('rotation','0 0 0');
+                    wangEl.appendChild(aniwangEl3);
+                    aniwangEl3.setAttribute('attribute', 'position');
+                    aniwangEl3.setAttribute('direction', 'alternate');
+                    aniwangEl3.setAttribute('rotation', '0 0 0');
+                    aniwangEl3.setAttribute('delay', '71000');
+                    aniwangEl3.setAttribute('id', 'aniwangEl3');   
+                    aniwangEl3.setAttribute('from', '-6 1.5 0.5');        
+                    aniwangEl3.setAttribute('repeat', '1');
+                    aniwangEl3.setAttribute('to', '-6 1.8 0.5');
+                    
+                    var anigodoneEl1 = document.createElement('a-animation');
+                    godoneEl.setAttribute('rotation','0 0 0');
+                    godoneEl.appendChild(anigodoneEl1);
+                    anigodoneEl1.setAttribute('attribute', 'position');
+                    anigodoneEl1.setAttribute('direction', 'alternate');
+                    anigodoneEl1.setAttribute('rotation', '0 0 0');
+                    anigodoneEl1.setAttribute('delay', '74000');
+                    anigodoneEl1.setAttribute('id', 'anigodoneEl1');   
+                    anigodoneEl1.setAttribute('from', '8 2.9 -4.5');        
+                    anigodoneEl1.setAttribute('repeat', '1');
+                    anigodoneEl1.setAttribute('to', '8 3.2 -4.5');
+                    
+                    var anishenteEl = document.createElement('a-animation');
+                    shenteEl.setAttribute('rotation','0 0 0');
+                    shenteEl.appendChild(anishenteEl);
+                    anishenteEl.setAttribute('attribute', 'position');
+                    anishenteEl.setAttribute('direction', 'alternate');
+                    anishenteEl.setAttribute('rotation', '0 0 0');
+                    anishenteEl.setAttribute('delay', '81000');
+                    anishenteEl.setAttribute('id', 'anishenteEl');   
+                    anishenteEl.setAttribute('from', '0 1.5 -6');        
+                    anishenteEl.setAttribute('repeat', '1');
+                    anishenteEl.setAttribute('to', '0 1.8 -6');
+                    
+                    var anigodoneEl2 = document.createElement('a-animation');
+                    godoneEl.setAttribute('rotation','0 0 0');
+                    godoneEl.appendChild(anigodoneEl2);
+                    anigodoneEl2.setAttribute('attribute', 'position');
+                    anigodoneEl2.setAttribute('direction', 'alternate');
+                    anigodoneEl2.setAttribute('rotation', '0 0 0');
+                    anigodoneEl2.setAttribute('delay', '84000');
+                    anigodoneEl2.setAttribute('id', 'anigodoneEl1');   
+                    anigodoneEl2.setAttribute('from', '8 2.9 -4.5');        
+                    anigodoneEl2.setAttribute('repeat', '1');
+                    anigodoneEl2.setAttribute('to', '8 3.2 -4.5');
+                    
+                    var anishenteEl2 = document.createElement('a-animation');
+                    shenteEl.setAttribute('rotation','0 0 0');
+                    shenteEl.appendChild(anishenteEl2);
+                    anishenteEl2.setAttribute('attribute', 'position');
+                    anishenteEl2.setAttribute('direction', 'alternate');
+                    anishenteEl2.setAttribute('rotation', '0 0 0');
+                    anishenteEl2.setAttribute('delay', '100000');
+                    anishenteEl2.setAttribute('id', 'anishenteEl2');  
+                    anishenteEl2.setAttribute('from', '0 1.5 -6');        
+                    anishenteEl2.setAttribute('repeat', '1');
+                    anishenteEl2.setAttribute('to', '0 1.8 -6');
+                    
+                    var anigodoneEl3 = document.createElement('a-animation');
+                    godoneEl.setAttribute('rotation','0 0 0');
+                    godoneEl.appendChild(anigodoneEl3);
+                    anigodoneEl3.setAttribute('attribute', 'position');
+                    anigodoneEl3.setAttribute('direction', 'alternate');
+                    anigodoneEl3.setAttribute('rotation', '0 0 0');
+                    anigodoneEl3.setAttribute('delay', '104000');
+                    anigodoneEl3.setAttribute('id', 'anigodoneEl3');   
+                    anigodoneEl3.setAttribute('from', '8 2.9 -4.5');        
+                    anigodoneEl3.setAttribute('repeat', '1');
+                    anigodoneEl3.setAttribute('to', '8 3.2 -4.5');
+                    
+                    
+                    var anipolizistEl5 = document.createElement('a-animation');
+                    polizistEl.setAttribute('rotation','0 0 0');
+                    polizistEl.appendChild(anipolizistEl3);
+                    anipolizistEl5.setAttribute('attribute', 'position');
+                    anipolizistEl5.setAttribute('direction', 'alternate');
+                    anipolizistEl5.setAttribute('rotation', '0 0 0');
+                    anipolizistEl5.setAttribute('delay', '111000');
+                    anipolizistEl5.setAttribute('id', 'anipolizistEl5');   
+                    anipolizistEl5.setAttribute('from', '-6 1.5 -4');        
+                    anipolizistEl5.setAttribute('repeat', '1');
+                    anipolizistEl5.setAttribute('to', '-6 1.8 -4'); 
+                    
+                    var anigodoneEl4 = document.createElement('a-animation');
+                    godoneEl.setAttribute('rotation','0 0 0');
+                    godoneEl.appendChild(anigodoneEl4);
+                    anigodoneEl4.setAttribute('attribute', 'position');
+                    anigodoneEl4.setAttribute('direction', 'alternate');
+                    anigodoneEl4.setAttribute('rotation', '0 0 0');
+                    anigodoneEl4.setAttribute('delay', '154000');
+                    anigodoneEl4.setAttribute('id', 'anigodoneEl4');   
+                    anigodoneEl4.setAttribute('from', '8 2.9 -4.5');        
+                    anigodoneEl4.setAttribute('repeat', '1');
+                    anigodoneEl4.setAttribute('to', '8 3.2 -4.5');
+                    
+                    blockZweiZuEnde = true;
+                }
+                
+                
+                
+                /////////////////////////////
+                
+                
+                if(blockEnum==3 && that.data.animationId== "#anipolizistEl" ){ 
+                    var anishufuEl = document.createElement('a-animation');
+                    shufuEl.setAttribute('rotation','0 0 0');
+                    shufuEl.appendChild(anishufuEl);
+                    anishufuEl.setAttribute('attribute', 'position');
+                    anishufuEl.setAttribute('direction', 'alternate');
+                    anishufuEl.setAttribute('rotation', '0 0 0');
+                    anishufuEl.setAttribute('delay', '4000');
+                    anishufuEl.setAttribute('id', 'anishufuEl');   
+                    anishufuEl.setAttribute('from', '-6.88 1.5 -6.69');        
+                    anishufuEl.setAttribute('repeat', '1');
+                    anishufuEl.setAttribute('to', '-6.88 1.8 -6.69');
+
+                    var aniwangEl = document.createElement('a-animation');
+                    wangEl.setAttribute('rotation','0 0 0');
+                    wangEl.appendChild(aniwangEl);
+                    aniwangEl.setAttribute('attribute', 'position');
+                    aniwangEl.setAttribute('direction', 'alternate');
+                    aniwangEl.setAttribute('rotation', '0 0 0');
+                    aniwangEl.setAttribute('delay', '13000');
+                    aniwangEl.setAttribute('id', 'aniwangEl');   
+                    aniwangEl.setAttribute('from', '-6 1.5 0.5');        
+                    aniwangEl.setAttribute('repeat', '1');
+                    aniwangEl.setAttribute('to', '-6 1.8 0.5');
+
+
+                    var anipolizistEl2 = document.createElement('a-animation');
+                    polizistEl.setAttribute('rotation','0 0 0');
+                    polizistEl.appendChild(anipolizistEl2);
+                    anipolizistEl2.setAttribute('attribute', 'position');
+                    anipolizistEl2.setAttribute('direction', 'alternate');
+                    anipolizistEl2.setAttribute('rotation', '0 0 0');
+                    anipolizistEl2.setAttribute('delay', '16000');
+                    anipolizistEl2.setAttribute('id', 'anipolizistEl2');   
+                    anipolizistEl2.setAttribute('from', '-6 1.5 -4');        
+                    anipolizistEl2.setAttribute('repeat', '1');
+                    anipolizistEl2.setAttribute('to', '-6 1.8 -4');
+
+                }
+                
+                
+                if(blockEnum==3 && that.data.animationId== "#anihausbesitzerinEL" ){
+                    
+                    var anihausbesitzerinEL2 = document.createElement('a-animation');
+                    hausbesitzerinEL.setAttribute('rotation','0 0 0');
+                    hausbesitzerinEL.appendChild(anihausbesitzerinEL2);
+                    anihausbesitzerinEL2.setAttribute('attribute', 'position');
+                    anihausbesitzerinEL2.setAttribute('direction', 'alternate');
+                    anihausbesitzerinEL2.setAttribute('rotation', '0 0 0');
+                    anihausbesitzerinEL2.setAttribute('delay', '0');
+                    anihausbesitzerinEL2.setAttribute('id', 'anihausbesitzerinEL2');   
+                    anihausbesitzerinEL2.setAttribute('from', '-6.5 1.5 -1');        
+                    anihausbesitzerinEL2.setAttribute('repeat', '1');
+                    anihausbesitzerinEL2.setAttribute('to', '-6.5 1.8 -1');
+                    
+                    
+                    
+                    var anipolizistEl22 = document.createElement('a-animation');
+                    polizistEl.setAttribute('rotation','0 0 0');
+                    polizistEl.appendChild(anipolizistEl22);
+                    anipolizistEl22.setAttribute('attribute', 'position');
+                    anipolizistEl22.setAttribute('direction', 'alternate');
+                    anipolizistEl22.setAttribute('rotation', '0 0 0');
+                    anipolizistEl22.setAttribute('delay', '18000');
+                    anipolizistEl22.setAttribute('id', 'anipolizistEl22');   
+                    anipolizistEl22.setAttribute('from', '-6 1.5 -4');        
+                    anipolizistEl22.setAttribute('repeat', '1');
+                    anipolizistEl22.setAttribute('to', '-6 1.8 -4');
+                    
+                }
+                
+                
+                //eventlistener//////////////////////////
+            });
+                //soundallowed
+            }
+              //init
+        }
+            //finalclose
+});
+        
+  </script>        
+  </body>
+</html>
